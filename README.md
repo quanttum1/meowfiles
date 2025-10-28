@@ -1,4 +1,4 @@
-## Installation"
+## Installation
 ```bash
 git clone https://github.com/quanttum1/meowfiles
 cd meowfiles/
@@ -9,7 +9,7 @@ stow --target=$HOME home
 
 bongocat:
 ```
-[2025-10-28 21:24:55.328] INFO: Starting Bongo Cat Overlay v1.2.4
+[2025-10-28 21:31:08.231] INFO: Starting Bongo Cat Overlay v1.2.4
 Bongo Cat Overlay v1.2.4
 Built with fast optimizations
 ```
