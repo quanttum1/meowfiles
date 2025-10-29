@@ -1,3 +1,8 @@
+## Preview
+![Wezterm + Neovim](screenshots/image_1.png)
+![Wezterm + Fish](screenshots/image_2.png)
+![Wofi](screenshots/image_3.png)
+
 ## Installation
 ```bash
 git clone https://github.com/quanttum1/meowfiles
@@ -9,7 +14,7 @@ stow --target=$HOME home
 
 bongocat:
 ```
-[2025-10-29 08:56:22.309] INFO: Starting Bongo Cat Overlay v1.2.4
+[2025-10-29 12:36:15.283] INFO: Starting Bongo Cat Overlay v1.2.4
 Bongo Cat Overlay v1.2.4
 Built with fast optimizations
 ```
