@@ -1,3 +1,5 @@
+-- Based on https://github.com/nvim-lua/kickstart.nvim
+
 vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.shiftwidth = 4 -- Number of spaces per indentation level
 vim.opt.tabstop = 4 -- Number of spaces a tab counts for
@@ -48,7 +50,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 vim.opt.foldmethod = "indent"
-vim.opt.foldlevel = 99
+vim.opt.foldlevel = 99 -- Unfolded by default
 
 -- Keep signcolumn on by default
 vim.o.signcolumn = "yes"
