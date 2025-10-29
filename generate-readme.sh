@@ -1,3 +1,5 @@
+SCRIPT_DIR="$(realpath "$(dirname "${BASH_SOURCE[0]}")")"
+
 generate-version() {
     echo "$1:"
     echo "\`\`\`"
@@ -7,7 +9,7 @@ generate-version() {
 }
 
 generate-readme() {
-    cat README_template.md
+    cat $SCRIPT_DIR/README_template.md
     generate-version "bongocat"
     generate-version "fish"
     generate-version "nvim"
@@ -18,5 +20,4 @@ generate-readme() {
     echo "Run \`bash generate-readme.sh\` whenever you update any of them"
 }
 
-SCRIPT_DIR="$(realpath "$(dirname "${BASH_SOURCE[0]}")")"
 generate-readme > $SCRIPT_DIR/README.md
