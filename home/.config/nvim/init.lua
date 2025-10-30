@@ -100,6 +100,7 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", ":", "q:i")
 vim.keymap.set("i", "<C-;>", "<Esc><CR>")
 vim.keymap.set("v", ":", "q:is/")
+vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>")
 
 -- My compilation keybind
 vim.keymap.set("n", "<leader>w", '<cmd>silent exec "!swaymsg focus right; ydotool key Up; ydotool key Enter"<CR>')
@@ -1061,6 +1062,8 @@ require("lazy").setup({
 				require("nvim-tree.api").node.open.edit()
 				vim.cmd("NvimTreeClose")
 			end, { desc = "Open file and close nvim-tree" })
+
+			vim.cmd("NvimTreeOpen")
 		end,
 	},
 	{
