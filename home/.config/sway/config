@@ -187,16 +187,16 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym --to-code $mod+1 workspace number $ws1
-bindsym --to-code $mod+2 workspace number $ws2
-bindsym --to-code $mod+3 workspace number $ws3
-bindsym --to-code $mod+4 workspace number $ws4
-bindsym --to-code $mod+5 workspace number $ws5
-bindsym --to-code $mod+6 workspace number $ws6
-bindsym --to-code $mod+7 workspace number $ws7
-bindsym --to-code $mod+8 workspace number $ws8
-bindsym --to-code $mod+9 workspace number $ws9
-bindsym --to-code $mod+0 workspace number $ws10
+bindsym --to-code $mod+1 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws1
+bindsym --to-code $mod+2 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws2
+bindsym --to-code $mod+3 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws3
+bindsym --to-code $mod+4 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws4
+bindsym --to-code $mod+5 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws5
+bindsym --to-code $mod+6 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws6
+bindsym --to-code $mod+7 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws7
+bindsym --to-code $mod+8 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws8
+bindsym --to-code $mod+9 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws9
+bindsym --to-code $mod+0 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws10
 
 # move focused container to workspace
 bindsym --to-code $mod+Shift+1 move container to workspace number $ws1
