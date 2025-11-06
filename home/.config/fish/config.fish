@@ -24,6 +24,7 @@ if status is-interactive
     bind -M default y 'echo (commandline) | wl-copy'
 
     alias rmfr="bash ~/.config/fish/commands/rmfr.sh"
+    alias sowon-with-alarm="bash ~/.config/fish/commands/sowon-with-alarm.sh"
 
     __ignore_cd_dotdot
 end
