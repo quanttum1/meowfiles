@@ -17,7 +17,7 @@ if status is-interactive
 
     alias neome="python3 ~/src/simple_neome/main.py"
     alias mcal="ncal -M -b"
-    alias nv="nvim" # There are too many commands starting with n, so I can't rely on auto-complete
+    alias nv="nvim +'NvimTreeOpen'"
 
     bind -M default p paste_from_clipboard
     bind -M visual y 'echo (commandline -s) | wl-copy; commandline -f end-selection'

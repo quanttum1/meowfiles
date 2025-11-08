@@ -1062,8 +1062,6 @@ require("lazy").setup({
 				require("nvim-tree.api").node.open.edit()
 				vim.cmd("NvimTreeClose")
 			end, { desc = "Open file and close nvim-tree" })
-
-			vim.cmd("NvimTreeOpen")
 		end,
 	},
 	{
