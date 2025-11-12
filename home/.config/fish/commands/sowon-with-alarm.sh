@@ -1,5 +1,5 @@
 main() {
-    sowon -e $@; uudecode $0 | mpv - --volume=150
+    sowon -e $@; uudecode $0 | mpv - --volume=150 > /dev/null 2>&1
 }
 
 main $@ &
