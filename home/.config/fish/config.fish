@@ -9,7 +9,7 @@ if status is-interactive
     alias lofi="mpv $lofi_URL"
     alias lofi-cookies="mpv $lofi_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
-    set -Ux RGN_URL "https://youtu.be/aTiTRB4Pr-8"
+    set -Ux RGN_URL "https://youtu.be/nlJTur7x3oA"
     alias rgn="mpv $RGN_URL"
     alias rgn-cookies="mpv $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
