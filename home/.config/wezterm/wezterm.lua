@@ -9,7 +9,7 @@ return {
 	enable_wayland = true,
 	default_prog = { "/usr/bin/fish", "-l" },
 	font = wezterm.font("Agave Nerd Font Mono"),
-	font_size = 18.0,
+	font_size = 17.0,
 	keys = {
 		{
 			key = "N",
