@@ -7,6 +7,7 @@ wtype "$EMOJI"; wl-copy "$EMOJI"
 exit
 
 ### DATA ###
+👍🥲 yep
 € euro
 😀 grinning face face smile happy joy :D grin smiley
 😃 grinning face with big eyes face happy joy haha :D :) smile funny mouth open smiley smiling
