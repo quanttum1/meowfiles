@@ -16,6 +16,8 @@ blur enable
 blur_radius 5
 blur_passes 2
 
+corner_radius 15
+
 # Enable PipeWire screen sharing
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
