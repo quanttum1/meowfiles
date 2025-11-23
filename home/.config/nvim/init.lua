@@ -98,7 +98,7 @@ vim.o.confirm = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", ":", "q:i")
-vim.keymap.set("i", "<C-;>", "<Esc><CR>")
+vim.keymap.set("n", ";", ":")
 vim.keymap.set("v", ":", "q:is/")
 vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>")
 
