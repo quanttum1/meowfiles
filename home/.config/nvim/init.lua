@@ -101,6 +101,20 @@ vim.keymap.set("n", ":", "q:i")
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("v", ";", ":s/")
 
+-- Go to the first occurrence
+vim.keymap.set("n", "W", function()
+	local word = vim.fn.expand("<cword>")
+	if word == "" then
+		return
+	end
+
+	-- go to top without affecting jumplist
+	vim.cmd("keepjumps normal! gg")
+
+	-- search the word that was under cursor
+	vim.fn.search("\\<" .. word .. "\\>")
+end, { silent = true })
+
 vim.keymap.set("v", ":", "q:is/")
 vim.keymap.set("n", "<C-q>", "<cmd>qa<CR>")
 
