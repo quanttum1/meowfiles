@@ -108,6 +108,7 @@ vim.keymap.set("n", "W", function()
 		return
 	end
 
+	vim.cmd("normal! m'") -- Push the current position to the jumplist
 	-- go to top without affecting jumplist
 	vim.cmd("keepjumps normal! gg")
 
