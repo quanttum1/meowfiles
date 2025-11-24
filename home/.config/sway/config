@@ -12,6 +12,14 @@ for_window [window_type="utility"] floating enable
 
 for_window [app_id="wofi"] border none
 
+# Make sowon display at left top corner
+# WARNING: This numbers should probably be different on different machines
+for_window [app_id="sowon"] floating enable
+for_window [app_id="sowon"] resize shrink width 900 px
+for_window [app_id="sowon"] resize shrink height 300 px
+for_window [app_id="sowon"] move left 430 px
+for_window [app_id="sowon"] move up 410 px
+
 blur enable
 blur_radius 5
 blur_passes 2
