@@ -13,11 +13,7 @@ if status is-interactive
     alias rgn="mpv $RGN_URL"
     alias rgn-cookies="mpv $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
-    alias good-girl="mpv ~/assets/good-girl.webm"
-
-    # These two are for "yt" function if cookies are needed
-    set -Ux WITH "--cookies-from-browser"
-    set -Ux COOKIES "firefox"
+    alias yt-cookies="yt --cookies-from-browser firefox"
 
     alias neome="python3 ~/src/simple_neome/main.py"
     alias mcal="ncal -M -b"
