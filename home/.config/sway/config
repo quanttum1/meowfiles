@@ -71,6 +71,7 @@ bindsym --to-code $mod+apostrophe exec bash ~/.config/sway/scripts/wofi-emoji.sh
 bindsym --to-code $mod+backslash exec bluetoothctl connect 00:A4:1C:6D:61:77
 
 exec wl-clip-persist --clipboard regular
+exec wl-paste --watch cliphist store
 exec waybar
 exec bongocat --config ~/.config/bongocat/bongocat.conf --watch-config
 exec syncthing serve --no-browser
@@ -109,6 +110,8 @@ bindsym --to-code XF86AudioMicMute exec --no-startup-id pactl set-source-mute @D
 bindsym --to-code Print exec --no-startup-id grim -g "$(python3 ~/.config/sway/scripts/my-slurp.py)" ~/Pictures/Screenshots/shot_$(date +%Y_%m_%d_%H_%M_%S).png
 
 bindsym --to-code XF86Calculator exec --no-startup-id wezterm start --always-new-process -e ipython ~/src/python_shell/main.py
+
+bindsym --to-code $mod+slash exec cliphist list | wofi --dmenu --normal-window --cache-file=/dev/null | cliphist decode | wtype -
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
