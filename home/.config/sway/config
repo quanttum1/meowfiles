@@ -75,6 +75,7 @@ exec wl-paste --watch cliphist store
 exec waybar
 exec bongocat --config ~/.config/bongocat/bongocat.conf --watch-config
 exec syncthing serve --no-browser
+exec python3 ~/.config/sway/scripts/sleep-well.py
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
