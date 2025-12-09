@@ -101,6 +101,15 @@ vim.keymap.set("n", ":", "q:i")
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("v", ";", ":s/")
 
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	callback = function()
+		vim.opt.shiftwidth = 2
+		vim.opt.tabstop = 2
+		vim.opt.softtabstop = 2
+	end,
+})
+
 -- Go to the first occurrence
 vim.keymap.set("n", "W", function()
 	local word = vim.fn.expand("<cword>")
