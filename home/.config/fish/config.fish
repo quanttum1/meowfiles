@@ -5,9 +5,9 @@ if status is-interactive
     alias rm="trash"
     alias music="mpv ~/Music/ --shuffle --no-audio-display --loop-playlist --input-ipc-server=/tmp/mpvsocket"
 
-    set -Ux lofi_URL "https://youtu.be/jfKfPfyJRdk"
-    alias lofi="mpv $lofi_URL"
-    alias lofi-cookies="mpv $lofi_URL --ytdl-raw-options=cookies-from-browser=firefox"
+    set -Ux LOFI_URL "https://youtu.be/jfKfPfyJRdk"
+    alias lofi="mpv $LOFI_URL"
+    alias lofi-cookies="mpv $LOFI_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
     set -Ux RGN_URL "https://youtu.be/nlJTur7x3oA"
     alias rgn="mpv $RGN_URL"
@@ -23,7 +23,7 @@ if status is-interactive
     bind -M visual y 'echo (commandline -s) | wl-copy; commandline -f end-selection'
     bind -M default y 'echo (commandline) | wl-copy'
 
-    alias rmfr="bash ~/.config/fish/commands/rmfr.sh"
+    alias rmfr="/usr/bin/rm"
     alias sowon-with-alarm="bash ~/.config/fish/commands/sowon-with-alarm.sh"
 
     __ignore_cd_dotdot
