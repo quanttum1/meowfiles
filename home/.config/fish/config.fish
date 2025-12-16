@@ -22,6 +22,7 @@ if status is-interactive
     bind -M default p paste_from_clipboard
     bind -M visual y 'echo (commandline -s) | wl-copy; commandline -f end-selection'
     bind -M default y 'echo (commandline) | wl-copy'
+    bind -M insert \ek accept-autosuggestion
 
     alias rmfr="/usr/bin/rm"
     alias sowon-with-alarm="bash ~/.config/fish/commands/sowon-with-alarm.sh"
