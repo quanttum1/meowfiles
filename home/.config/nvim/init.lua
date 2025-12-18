@@ -133,6 +133,13 @@ vim.keymap.set("n", "<leader>w", '<cmd>silent exec "!swaymsg focus right; ydotoo
 
 vim.keymap.set("i", "<C-v>", "<Esc>pa")
 
+vim.keymap.set("v", "<leader>s(", "da()<Esc>P")
+vim.keymap.set("v", "<leader>s[", "da[]<Esc>P")
+vim.keymap.set("v", "<leader>s{", "da{}<Esc>P")
+vim.keymap.set("v", '<leader>s"', 'da""<Esc>P')
+vim.keymap.set("v", "<leader>s'", "da''<Esc>P")
+vim.keymap.set("v", "<leader>s`", "da``<Esc>P")
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
@@ -995,13 +1002,6 @@ require("lazy").setup({
 			--  - yinq - [Y]ank [I]nside [N]ext [Q]uote
 			--  - ci'  - [C]hange [I]nside [']quote
 			require("mini.ai").setup({ n_lines = 500 })
-
-			-- Add/delete/replace surroundings (brackets, quotes, etc.)
-			--
-			-- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
-			-- - sd'   - [S]urround [D]elete [']quotes
-			-- - sr)'  - [S]urround [R]eplace [)] [']
-			require("mini.surround").setup()
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
