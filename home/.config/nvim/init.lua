@@ -133,12 +133,13 @@ vim.keymap.set("n", "<leader>w", '<cmd>silent exec "!swaymsg focus right; ydotoo
 
 vim.keymap.set("i", "<C-v>", "<Esc>pa")
 
-vim.keymap.set("v", "<leader>s(", "da()<Esc>P")
-vim.keymap.set("v", "<leader>s[", "da[]<Esc>P")
-vim.keymap.set("v", "<leader>s{", "da{}<Esc>P")
-vim.keymap.set("v", '<leader>s"', 'da""<Esc>P')
-vim.keymap.set("v", "<leader>s'", "da''<Esc>P")
-vim.keymap.set("v", "<leader>s`", "da``<Esc>P")
+vim.keymap.set("v", "<leader>s(", "di()<Esc>P")
+vim.keymap.set("v", "<leader>s[", "di[]<Esc>P")
+vim.keymap.set("v", "<leader>s{", "di{}<Esc>P")
+vim.keymap.set("v", '<leader>s"', 'di""<Esc>P')
+vim.keymap.set("v", "<leader>s'", "di''<Esc>P")
+vim.keymap.set("v", "<leader>s`", "di``<Esc>P")
+vim.keymap.set("v", "<leader>s<", "di<><Esc>P")
 
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
