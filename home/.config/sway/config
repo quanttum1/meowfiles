@@ -113,7 +113,7 @@ bindsym --to-code Print exec --no-startup-id grim -g "$(python3 ~/.config/sway/s
 
 bindsym --to-code XF86Calculator exec --no-startup-id wezterm start --always-new-process -e ipython ~/src/python_shell/main.py
 
-bindsym --to-code $mod+slash exec cliphist list | wofi --dmenu --normal-window --cache-file=/dev/null | cliphist decode | wtype -
+bindsym --to-code $mod+slash exec cliphist list | wofi --dmenu --normal-window --cache-file=/dev/null | cliphist decode | wl-copy
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
