@@ -5,6 +5,8 @@ if status is-interactive
     alias rm="trash"
     alias music="mpv ~/Music/ --shuffle --no-audio-display --loop-playlist --input-ipc-server=/tmp/mpvsocket"
 
+    set -Ux EDITOR "nvim"
+
     set -Ux LOFI_URL "https://youtu.be/jfKfPfyJRdk"
     alias lofi="mpv --force-window=immediate $LOFI_URL"
     alias lofi-cookies="mpv --force-window=immediate $LOFI_URL --ytdl-raw-options=cookies-from-browser=firefox"
