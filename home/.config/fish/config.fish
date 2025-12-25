@@ -6,12 +6,12 @@ if status is-interactive
     alias music="mpv ~/Music/ --shuffle --no-audio-display --loop-playlist --input-ipc-server=/tmp/mpvsocket"
 
     set -Ux LOFI_URL "https://youtu.be/jfKfPfyJRdk"
-    alias lofi="mpv $LOFI_URL"
-    alias lofi-cookies="mpv $LOFI_URL --ytdl-raw-options=cookies-from-browser=firefox"
+    alias lofi="mpv --force-window=immediate $LOFI_URL"
+    alias lofi-cookies="mpv --force-window=immediate $LOFI_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
     set -Ux RGN_URL "https://youtu.be/nlJTur7x3oA"
-    alias rgn="mpv $RGN_URL"
-    alias rgn-cookies="mpv $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
+    alias rgn="mpv --force-window=immediate $RGN_URL"
+    alias rgn-cookies="mpv --force-window=immediate $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
     alias yt-cookies="yt --cookies-from-browser firefox"
 

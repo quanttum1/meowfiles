@@ -1,3 +1,3 @@
 function yt
-    yt-dlp $argv -o - | mpv - --speed=1.46
+    yt-dlp $argv -o - | mpv --force-window=immediate - --speed=1.46
 end
