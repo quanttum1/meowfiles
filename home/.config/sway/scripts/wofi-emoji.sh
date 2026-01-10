@@ -1,10 +1,22 @@
 #!/usr/bin/env bash
 # Based on https://github.com/Zeioth/wofi-emoji with minor changes
-set -euo pipefail
+# set -euo pipefail
 
-EMOJI="$(sed '1,/^### DATA ###$/d' $0 | wofi -p "emoji" --normal-window --show dmenu -i -k $HOME/.cache/wofi-emoji | cut -d ' ' -f 1 | tr -d '\n')"
-wtype "$EMOJI"; wl-copy "$EMOJI"
-exit
+last_layout=$(swaymsg -t get_inputs -r \
+  | jq -r '.[] | select(.type=="keyboard") | .xkb_active_layout_index' \
+  | head -n1)
+
+# Switch to English (index 0)
+swaymsg input "*" xkb_switch_layout 0
+
+EMOJI="$(sed '1,/^### DATA ###$/d' "$0" \
+  | wofi -p "emoji" --normal-window --show dmenu -i \
+  | cut -d ' ' -f 1 | tr -d '\n')"
+
+wtype "$EMOJI"
+wl-copy "$EMOJI"
+
+swaymsg input "*" xkb_switch_layout "$last_layout"
 
 ### DATA ###
 👍🥲 yep
