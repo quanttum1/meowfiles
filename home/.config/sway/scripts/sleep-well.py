@@ -13,12 +13,10 @@ cmd = "swaylock -c 000000"
 while True:
     now = datetime.now()
 
-    if now.hour >= sleep_begin[0] and \
-        now.minute >= sleep_begin[1]:
-        os.system(cmd)
+    sleep_begin_dt = datetime(now.year, now.month, now.day, *sleep_begin)
+    sleep_end_dt = datetime(now.year, now.month, now.day, *sleep_end)
 
-    if now.hour <= sleep_end[0] and \
-        now.minute <= sleep_end[1]:
-        os.system(cmd)
+    if now > sleep_begin_dt or now < sleep_end_dt:
+        os.system('fullscreen-notification "Go sleep" 10')
 
     time.sleep(10)
