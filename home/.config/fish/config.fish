@@ -29,6 +29,7 @@ if status is-interactive
 
     alias rmfr="/usr/bin/rm"
     alias sowon-with-alarm="bash ~/.config/fish/commands/sowon-with-alarm.sh"
+    alias sowon-till="python3 ~/.config/fish/commands/sowon-till.py"
 
     __ignore_cd_dotdot
 end
