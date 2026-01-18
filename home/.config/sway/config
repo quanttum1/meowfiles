@@ -20,6 +20,9 @@ for_window [app_id="sowon"] resize shrink height 300 px
 for_window [app_id="sowon"] move left 430 px
 for_window [app_id="sowon"] move up 410 px
 
+# This is avoid `~/.local/bin/fullscreen-notification` messing with my window mode
+# Otherwise it triggers `for_window [class=".*"] layout tabbed`
+for_window [app_id="fullscreen"] floating enable
 for_window [app_id="fullscreen"] fullscreen enable
 
 blur enable
