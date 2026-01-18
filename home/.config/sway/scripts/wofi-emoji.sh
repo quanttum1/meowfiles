@@ -271,7 +271,7 @@ swaymsg input "*" xkb_switch_layout "$last_layout"
 🤦 person facepalming disappointed disbelief exasperation face facepalm head hitting palm picard smh
 🤦‍♂️ man facepalming man male boy disbelief exasperation face facepalm men palm
 🤦‍♀️ woman facepalming woman female girl disbelief exasperation face facepalm palm women
-🤷 idk person shrugging regardless doubt ignorance indifference shrug shruggie ¯\
+¯\_(ツ)_/¯ idk person shrugging regardless doubt ignorance indifference shrug shruggie ¯\
 🤷‍♂️ man shrugging man male boy confused indifferent doubt ignorance indifference men shrug
 🤷‍♀️ woman shrugging woman female girl confused indifferent doubt ignorance indifference shrug women
 🧑‍⚕️ health worker hospital dentist doctor healthcare md nurse physician professional therapist
