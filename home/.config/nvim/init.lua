@@ -101,6 +101,11 @@ vim.keymap.set("n", ":", "q:i")
 vim.keymap.set("n", ";", ":")
 vim.keymap.set("v", ";", ":s/")
 
+vim.keymap.set("i", "<C-h>", "<Left>")
+vim.keymap.set("i", "<C-j>", "<Down>")
+vim.keymap.set("i", "<C-k>", "<Up>")
+vim.keymap.set("i", "<C-l>", "<Right>")
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
 	callback = function()
