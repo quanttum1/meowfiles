@@ -30,6 +30,10 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     eval "$(ssh-agent -s)"
 fi
 
+export LANG=en_GB.UTF-8
+export LC_TIME=en_GB.UTF-8
+export LC_MEASUREMENT=en_GB.UTF-8
+
 if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
     export OZONE_PLATFORM=wayland
     export GDK_BACKEND=wayland
