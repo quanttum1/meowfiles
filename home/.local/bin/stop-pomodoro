@@ -1,3 +1,0 @@
-#!/usr/bin/bash
-
-pkill -f "bash /home/$USER/.local/bin/pomodoro" && killall sowon

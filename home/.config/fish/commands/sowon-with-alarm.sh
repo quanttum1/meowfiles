@@ -1,8 +1,7 @@
 main() {
-    sowon -e $@; fullscreen-notification "Time is up!" 3 &
-    sowon
+    sowon -e $@;
+    swaymsg "workspace 9"
+    swaymsg "focus left"
 }
 
 main $@ &
-disown
-exit
