@@ -793,8 +793,6 @@ require("lazy").setup({
 					["<A-l>"] = cmp.mapping.select_prev_item(),
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
 					{ name = "path" },
 					{
 						name = "buffer",
@@ -804,6 +802,8 @@ require("lazy").setup({
 							end,
 						},
 					},
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" },
 				}),
 			})
 		end,
