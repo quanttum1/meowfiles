@@ -3,7 +3,8 @@ function morning
     ( \
         python3 -c '
 import random
-print(random.choice([
+import sys
+video = random.choice([
     "https://youtu.be/19G8775Qn9s",
     "https://youtu.be/pNRP4_QYmWQ",
     "https://youtu.be/zZSV2NKhytA",
@@ -12,6 +13,8 @@ print(random.choice([
     "https://youtu.be/9g4z0gFlfpA",
     "https://youtu.be/lfbHlWrCAyk",
     "https://youtu.be/4AoKahQ8eYs"
-]), end="")' \
+])
+print(f"Playing {video}", file=sys.stderr)
+print(video, end="")' \
     )
 end
