@@ -781,13 +781,6 @@ require("lazy").setup({
 					end,
 				},
 				mapping = cmp.mapping.preset.insert({
-					["<C-n>"] = cmp.mapping.select_next_item(),
-					["<C-p>"] = cmp.mapping.select_prev_item(),
-					["<C-d>"] = cmp.mapping.scroll_docs(-4),
-					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
-
 					["<A-j>"] = cmp.mapping.confirm({ select = true }),
 					["<A-k>"] = cmp.mapping.select_next_item(),
 					["<A-l>"] = cmp.mapping.select_prev_item(),
@@ -872,8 +865,8 @@ require("lazy").setup({
 			})
 
 			vim.keymap.set({ "i", "s" }, "<Tab>", function()
-				if ls.expand_or_jumpable() then
-					ls.expand_or_jump()
+				if ls.jumpable(1) then
+					ls.jump(1)
 				else
 					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", true)
 				end
