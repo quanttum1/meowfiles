@@ -2,6 +2,9 @@
 import subprocess
 import json
 
+# This script calls slurp, but if it doesn't return anything, returns the position of the
+# screen focused
+
 result = subprocess.run(
     ["slurp"],
     capture_output=True,

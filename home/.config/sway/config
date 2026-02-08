@@ -115,7 +115,7 @@ bindsym --to-code XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volum
 bindsym --to-code XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym --to-code XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym --to-code Print exec --no-startup-id grim -g "$(python3 ~/.config/sway/scripts/my-slurp.py)" ~/Pictures/Screenshots/shot_$(date +%Y_%m_%d_%H_%M_%S).png
+bindsym --to-code Print exec --no-startup-id bash ~/.config/sway/scripts/screenshot.sh
 
 bindsym --to-code XF86Calculator exec --no-startup-id wezterm start --always-new-process -e ipython ~/src/python_shell/main.py
 
