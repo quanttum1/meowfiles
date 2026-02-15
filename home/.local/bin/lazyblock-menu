@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+import os
+import subprocess
+
+# Change this if you want to configure its bevaviour somehow
+COMMAND = f'my-wofi-wrapper --normal-window -S dmenu -k {os.path.expanduser("~/.cache/lazyblock-menu")}'
+
+LAZYBLOCK_PATH = "/tmp/lazyblock" # This file is created when the menu is lazyblocked
+BLOCKLIST_PATH = os.path.expanduser('~/.config/lazyblock-menu/blocklist.txt')
+
+try:
+    blocklist = [i for i in open(BLOCKLIST_PATH).read().splitlines() if i]
+except FileNotFoundError:
+    print(f"Sorry, I couldn't find blocklist file {BLOCKLIST_PATH}")
+    print("Can you please create it and put there the list of programs you don't want me to show when I'm lazyblocked? 👉👈🥺")
+    exit(1)
+
+path = [d for d in os.environ['PATH'].split(':') if os.path.isdir(d)]
+path.reverse() # Programs in directories listed earlier in PATH should be found and used first
+# In my case those listed later will be overwriten by those listed earlier, and to do that we need to reverse the list
+
+while True:
+    is_lazyblocked = os.path.isfile(LAZYBLOCK_PATH)
+
+    programs = {}
+
+    for path_dir in path:
+        for file in os.listdir(path_dir):
+            file_path = os.path.join(path_dir, file)
+            if os.path.isfile(file_path) and os.access(file_path, os.X_OK):
+                programs[file] = file_path
+
+    program_list = '\n'.join(programs.keys())
+    program_list += '\ntoggle_lazyblock'
+
+    process = subprocess.Popen(
+        COMMAND.split(),
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        text=True
+    )
+
+    stdout, _ = process.communicate(input=program_list)
+
+    if process.returncode:
+        exit()
+
+    if stdout == 'toggle_lazyblock\n':
+        if is_lazyblocked:
+            os.system(f'rm {LAZYBLOCK_PATH}')
+        else:
+            os.system(f'touch {LAZYBLOCK_PATH}')
+        continue
+
+    if is_lazyblocked and stdout.removesuffix('\n') in blocklist:
+        continue
+
+    os.system(stdout)
+    break
+
