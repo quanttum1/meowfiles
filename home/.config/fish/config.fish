@@ -15,6 +15,10 @@ if status is-interactive
     alias rgn="mpv --force-window=immediate $RGN_URL"
     alias rgn-cookies="mpv --force-window=immediate $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
+    set -Ux PIANO_URL "https://youtu.be/TtkFsfOP9QI"
+    alias piano="mpv --force-window=immediate $PIANO_URL"
+    alias piano-cookies="mpv --force-window=immediate $PIANO_URL --ytdl-raw-options=cookies-from-browser=firefox"
+
     alias yt-cookies="yt --cookies-from-browser firefox"
 
     alias neome="python3 ~/src/simple_neome/main.py"
