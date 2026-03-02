@@ -1119,16 +1119,16 @@ require("lazy").setup({
 				git = {
 					enable = true,
 				},
+				actions = {
+					open_file = {
+						quit_on_open = true,
+					},
+				},
 			})
 
 			vim.keymap.set("n", "<leader>e", function()
 				vim.cmd("NvimTreeOpen")
 			end, { desc = "Focus or open file explorer" })
-
-			vim.keymap.set("n", "<leader>o", function()
-				require("nvim-tree.api").node.open.edit()
-				vim.cmd("NvimTreeClose")
-			end, { desc = "Open file and close nvim-tree" })
 		end,
 	},
 	{
