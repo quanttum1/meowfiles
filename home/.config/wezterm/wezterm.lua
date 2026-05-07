@@ -1,5 +1,20 @@
 local wezterm = require("wezterm")
 
+local fonts = {
+	wezterm.font_with_fallback({ "Agave Nerd Font" }),
+	wezterm.font_with_fallback({ "Noto Sans Mono", "nasin-nanpa", "Agave Nerd Font" }),
+}
+
+local font_index = 1
+
+wezterm.on("cycle-font", function(window, _)
+	font_index = font_index % #fonts + 1
+
+	window:set_config_overrides({
+		font = fonts[font_index],
+	})
+end)
+
 return {
 	audible_bell = "SystemBeep",
 	default_cursor_style = "SteadyBar",
@@ -8,22 +23,13 @@ return {
 	text_background_opacity = 0.5,
 	enable_wayland = true,
 	default_prog = { "/usr/bin/fish", "-l" },
-	font = wezterm.font("Agave Nerd Font Mono"),
+	font = wezterm.font("Agave Nerd Font"),
 	font_size = 17.0,
 	keys = {
 		{
-			key = "N",
+			key = "S",
 			mods = "CTRL|SHIFT",
-			action = wezterm.action_callback(function(window, pane)
-				local cwd_uri = pane:get_current_working_dir()
-				if cwd_uri then
-					local cwd = cwd_uri.file_path
-					local escaped_cwd = wezterm.shell_quote_arg(cwd)
-					os.execute("nohup wezterm start --always-new-process --cwd " .. escaped_cwd .. " >/dev/null 2>&1 &")
-				else
-					os.execute("nohup wezterm start --always-new-process >/dev/null 2>&1 &")
-				end
-			end),
+			action = wezterm.action.EmitEvent("cycle-font"),
 		},
 	},
 }
