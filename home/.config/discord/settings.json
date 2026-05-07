@@ -1,5 +1,5 @@
 {
-  "BACKGROUND_COLOR": "#121214",
+  "BACKGROUND_COLOR": "#000000",
   "IS_MAXIMIZED": false,
   "IS_MINIMIZED": false,
   "offloadAdmControls": true,
@@ -10,7 +10,7 @@
     "width": 1492,
     "height": 762
   },
-  "enableHardwareAcceleration": true,
+  "enableHardwareAcceleration": false,
   "asyncVideoInputDeviceInit": false,
   "enableLibOpenH264Electron": false,
   "openH264Enabled": true,
