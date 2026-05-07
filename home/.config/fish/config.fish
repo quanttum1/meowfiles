@@ -71,4 +71,6 @@ alias imgcat="wezterm imgcat"
 set -Ux DOTNET_ROOT $HOME/.dotnet
 set -gx PATH $PATH $DOTNET_ROOT $DOTNET_ROOT/tools
 
-source ~/.cargo/env.fish
+if [ -f ~/.cargo/env.fish ]
+    source ~/.cargo/env.fish
+end
