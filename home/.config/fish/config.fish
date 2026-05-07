@@ -32,7 +32,7 @@ if status is-interactive
     alias lofi-worst="mpv --ytdl-format=worst --force-window=immediate $LOFI_URL"
     alias lofi-cookies-worst="mpv --ytdl-format=worst --force-window=immediate $LOFI_URL --ytdl-raw-options=cookies-from-browser=firefox"
 
-    set -Ux RGN_URL "https://youtu.be/lO78hDilSLY"
+    set -Ux RGN_URL "https://youtu.be/CuroyKtk-fY"
     alias rgn="mpv --force-window=immediate $RGN_URL"
     alias rgn-cookies="mpv --force-window=immediate $RGN_URL --ytdl-raw-options=cookies-from-browser=firefox"
     alias rgn-worst="mpv --ytdl-format=worst --force-window=immediate $RGN_URL"
