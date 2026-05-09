@@ -15,5 +15,5 @@ stow --target=$HOME home
 
 ## Dependencies
 
-A kind person [@IsThisALis](https://github.com/IsThisALis) wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Make sure that I use Debian 12 on x86_64, so you might encounter issues if you use other distros
+A kind person [@IsThisALis](https://github.com/IsThisALis) wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Make sure that I ([quanttum1](https://github.com/quanttum1)) use Debian 12 on x86_64, so you might encounter issues if you use other distros
 

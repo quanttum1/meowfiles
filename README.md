@@ -13,9 +13,9 @@ cd meowfiles/
 stow --target=$HOME home
 ```
 
-## Versions of programs I use
+## Dependencies
 
-A kind person @IsThisALis wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Make sure that I (@quanttum1) use Debian 12 on x86_64, so you might encounter issues if you use other distros
+A kind person [@IsThisALis](https://github.com/IsThisALis) wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Make sure that I ([quanttum1](https://github.com/quanttum1)) use Debian 12 on x86_64, so you might encounter issues if you use other distros
 
 ### sway:
 - Installation/source: https://github.com/WillPower3309/swayfx
@@ -66,7 +66,7 @@ Waybar v0.9.17
 - Installation/source: https://github.com/saatvik333/wayland-bongocat/releases/download/v1.2.4/bongocat
 - Version:
 ```
-[2026-05-07 03:32:22.061] INFO: Starting Bongo Cat Overlay v1.2.4
+[2026-05-09 16:25:43.549] INFO: Starting Bongo Cat Overlay v1.2.4
 Bongo Cat Overlay v1.2.4
 Built with fast optimizations
 ```
