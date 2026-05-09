@@ -13,7 +13,7 @@ cd meowfiles/
 stow --target=$HOME home
 ```
 
-## Versions of programs I use
+## Dependencies
 
-A kind person @IsThisALis wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Make sure that I use Debian 12 on x86_64, so you might encounter issues if you use other distros
+A kind person [@IsThisALis](https://github.com/IsThisALis) wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Make sure that I use Debian 12 on x86_64, so you might encounter issues if you use other distros
 
