@@ -1,5 +1,5 @@
 function morning
-    mpv --force-window=immediate --ytdl-format=395+139 \
+    mpv --force-window=immediate --ytdl-format=worst \
     ( \
         python3 -c '
 import random
