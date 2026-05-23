@@ -47,6 +47,6 @@ if [ -z "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ];
 fi
 . "$HOME/.cargo/env"
 
-export DOTNET_ROOT=$HOME/.dotnet
+export DOTNET_ROOT=/usr/share/dotnet/sdk
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
