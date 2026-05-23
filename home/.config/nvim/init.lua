@@ -1,5 +1,7 @@
 -- Based on https://github.com/nvim-lua/kickstart.nvim
 
+vim.o.autoread = true
+
 vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.shiftwidth = 4 -- Number of spaces per indentation level
 vim.opt.tabstop = 4 -- Number of spaces a tab counts for
