@@ -22,7 +22,7 @@ return {
 	window_background_opacity = 0.5,
 	text_background_opacity = 0.5,
 	enable_wayland = true,
-	default_prog = { "/usr/bin/fish", "-l" },
+	default_prog = { "/usr/bin/tmux" },
 	font = wezterm.font("Agave Nerd Font"),
 	font_size = 17.0,
 	keys = {
