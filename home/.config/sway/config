@@ -122,6 +122,8 @@ bindsym --to-code XF86Calculator exec --no-startup-id wezterm start --always-new
 
 bindsym --to-code $mod+slash exec cliphist list | my-wofi-wrapper --dmenu --normal-window --cache-file=/dev/null | cliphist decode | wl-copy
 
+bindsym --to-code $mod+n exec bash ~/.config/sway/scripts/o-kama-sitelen-ukusu.sh
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
