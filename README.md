@@ -28,7 +28,7 @@ sway version 0.3.2
 - Installation/source: `sudo apt install wofi`
 - Version:
 ```
-v1.3
+v1.4.1
 ```
 
 ### wezterm:
@@ -59,14 +59,14 @@ Run "nvim -V1 -v" for more info
 - Installation/source: `sudo apt install waybar`
 - Version:
 ```
-Waybar v0.9.17
+Waybar v0.12.0
 ```
 
 ### bongocat:
 - Installation/source: https://github.com/saatvik333/wayland-bongocat/releases/download/v1.2.4/bongocat
 - Version:
 ```
-[2026-05-09 16:26:29.065] INFO: Starting Bongo Cat Overlay v1.2.4
+[2026-06-12 21:04:07.986] INFO: Starting Bongo Cat Overlay v1.2.4
 Bongo Cat Overlay v1.2.4
 Built with fast optimizations
 ```
