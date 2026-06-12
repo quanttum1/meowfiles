@@ -1234,6 +1234,7 @@ require("lazy").setup({
 
 			-- Disable and enable cursors.
 			set({ "n", "x" }, "<c-w>", mc.toggleCursor)
+			set("n", "<leader>a", mc.alignCursors)
 
 			-- Mappings defined in a keymap layer only apply when there are
 			-- multiple cursors. This lets you have overlapping mappings.
