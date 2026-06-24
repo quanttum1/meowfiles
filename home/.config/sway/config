@@ -1,3 +1,5 @@
+# some of this file comes from the default i3 config i used before i switched to sway
+# so some of the things are not needed anymore, but if it works, i won't touch it :)
 set $mod Mod4
 
 workspace 1 output HDMI-A-1
@@ -85,6 +87,9 @@ exec syncthing serve --no-browser
 exec fish ~/.config/sway/scripts/get-weather.fish
 exec bash ~/.config/sway/scripts/ram-monitor.sh
 
+# private gitignored file to initialise custom things, if you don't have it, it shouldn't cause any issues
+exec bash ~/.config/sway/scripts/private.sh
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
@@ -120,6 +125,7 @@ bindsym --to-code Print exec --no-startup-id bash ~/.config/sway/scripts/screens
 
 bindsym --to-code XF86Calculator exec --no-startup-id wezterm start --always-new-process -e ipython3 ~/.config/sway/scripts/python_shell.py
 
+# clipboard history selection
 bindsym --to-code $mod+slash exec cliphist list | my-wofi-wrapper --dmenu --normal-window --cache-file=/dev/null | cliphist decode | wl-copy
 
 bindsym --to-code $mod+n exec bash ~/.config/sway/scripts/o-kama-sitelen-ukusu.sh
@@ -204,7 +210,10 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# switch to workspace
+# switch to workspace, the custom script is needed for floating window to follow me,
+# because i sometimes use sowon in floating mode with commands like `sowon-with-alarm`
+# if you don't need this, replace `exec fish ~/.config/sway/scripts/switch-workspace.fish`
+# with `workspace number`
 bindsym --to-code $mod+1 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws1
 bindsym --to-code $mod+2 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws2
 bindsym --to-code $mod+3 exec fish ~/.config/sway/scripts/switch-workspace.fish $ws3
