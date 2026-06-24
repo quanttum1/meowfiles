@@ -1,0 +1,12 @@
+#!/bin/bash
+# true suspend, unlike `~/.suspend_handler.sh`
+bash -c '
+swaylock -c 000000 && \
+brightnessctl set 50% && \
+brightnessctl -d "dell::kbd_backlight" set 100%
+' &
+
+brightnessctl set 0
+brightnessctl -d "dell::kbd_backlight" set 0
+
+systemctl suspend
