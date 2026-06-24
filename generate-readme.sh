@@ -19,6 +19,7 @@ generate-readme() {
     generate-version "nvim" "https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-linux-x86_64.appimage"
     generate-version "waybar" "\`sudo apt install waybar\`"
     generate-version "bongocat" "https://github.com/saatvik333/wayland-bongocat/releases/download/v1.2.4/bongocat"
+    generate-version "ipython3" "\`sudo apt install ipython3\`"
     echo "Run \`bash generate-readme.sh\` whenever you update any of them"
 }
 

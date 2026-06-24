@@ -5,17 +5,16 @@
 
 ## Installation
 
-WARNING: I cannot guarantee you that this config will work on your machine, but if you follow the instructions and install the right versions of software, it should work.
+WARNING: I cannot guarantee you that this config will work on your machine, but if you follow the instructions and install the right versions of software, it should work. Additionally, this dotfiles have a lot of things that you might not need. That's why it's not meant that you blindly copy everything from it, copy only the things that you want have.
 
+If you preserve the folder structure I have, to install, run this command from inside the repo:
 ```bash
-git clone https://github.com/quanttum1/meowfiles
-cd meowfiles/
 stow --target=$HOME home
 ```
 
 ## Dependencies
 
-A kind person [@IsThisALis](https://github.com/IsThisALis) wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Be aware that I ([quanttum1](https://github.com/quanttum1)) use Debian 12 on x86_64, so you might encounter issues if you use other distros
+A kind person [@IsThisALis](https://github.com/IsThisALis) wrote [commands to install the dependencies on Arch](./INSTALL_arch.md). Be aware that I ([quanttum1](https://github.com/quanttum1)) use Debian 13 on x86_64, so you might encounter issues if you use other distros
 
 ### sway:
 - Installation/source: https://github.com/WillPower3309/swayfx
@@ -66,9 +65,16 @@ Waybar v0.12.0
 - Installation/source: https://github.com/saatvik333/wayland-bongocat/releases/download/v1.2.4/bongocat
 - Version:
 ```
-[2026-06-12 21:04:07.986] INFO: Starting Bongo Cat Overlay v1.2.4
+[2026-06-24 11:10:37.610] INFO: Starting Bongo Cat Overlay v1.2.4
 Bongo Cat Overlay v1.2.4
 Built with fast optimizations
+```
+
+### ipython3:
+- Installation/source: `sudo apt install ipython3`
+- Version:
+```
+8.35.0
 ```
 
 Run `bash generate-readme.sh` whenever you update any of them
