@@ -894,8 +894,8 @@ require("lazy").setup({
 
 			vim.keymap.set({ "i", "s" }, "<Tab>", function()
 				if ls.jumpable(1) then
-					vim.cmd("normal! m'")
 					ls.jump(1)
+					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<ESC>m'", true, false, true), "n", false)
 				else
 					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", true)
 				end
@@ -903,8 +903,8 @@ require("lazy").setup({
 
 			vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
 				if ls.jumpable(-1) then
-					vim.cmd("normal! m'")
 					ls.jump(-1)
+					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<ESC>m'", true, false, true), "n", false)
 				else
 					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<S-Tab>", true, false, true), "n", true)
 				end
