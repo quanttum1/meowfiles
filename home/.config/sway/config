@@ -13,6 +13,8 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="utility"] floating enable
 
 for_window [app_id="wofi"] border none
+for_window [app_id="wofi"] move left 250px
+for_window [app_id="wofi"] move up 100px
 
 # Make sowon display at left top corner
 # WARNING: This numbers should probably be different on different machines

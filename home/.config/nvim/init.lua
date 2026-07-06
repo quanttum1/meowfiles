@@ -895,7 +895,7 @@ require("lazy").setup({
 			vim.keymap.set({ "i", "s" }, "<Tab>", function()
 				if ls.jumpable(1) then
 					ls.jump(1)
-					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<ESC>m'", true, false, true), "n", false)
+					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<ESC>m'a", true, false, true), "n", false)
 				else
 					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Tab>", true, false, true), "n", true)
 				end
@@ -904,7 +904,7 @@ require("lazy").setup({
 			vim.keymap.set({ "i", "s" }, "<S-Tab>", function()
 				if ls.jumpable(-1) then
 					ls.jump(-1)
-					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<ESC>m'", true, false, true), "n", false)
+					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<ESC>m'a", true, false, true), "n", false)
 				else
 					vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<S-Tab>", true, false, true), "n", true)
 				end
@@ -1185,11 +1185,11 @@ require("lazy").setup({
 		end,
 	},
 
-	{
-		"vyfor/cord.nvim",
-		build = ":Cord update",
-		opts = {},
-	},
+	-- {
+	-- 	"vyfor/cord.nvim",
+	-- 	build = ":Cord update",
+	-- 	opts = {},
+	-- },
 	{
 		"jake-stewart/multicursor.nvim",
 		branch = "1.0",
@@ -1200,10 +1200,10 @@ require("lazy").setup({
 			local set = vim.keymap.set
 
 			-- Add or skip cursor above/below the main cursor.
-			set({ "n", "x" }, "<C-k>", function()
+			set({ "n", "x" }, "<A-k>", function()
 				mc.lineAddCursor(-1)
 			end)
-			set({ "n", "x" }, "<C-j>", function()
+			set({ "n", "x" }, "<A-j>", function()
 				mc.lineAddCursor(1)
 			end)
 			set({ "n", "x" }, "<leader><up>", function()
