@@ -43,29 +43,30 @@ exec systemctl --user start pipewire pipewire-pulse wireplumber xdg-desktop-port
 gaps inner 10
 gaps outer 10
 
+## lots of hardcoded things specifically for my usecase
 input * {
     xkb_layout us,ru
     xkb_options grp:win_space_toggle
 }
 
 
-# output HDMI-A-1 {
-#     resolution 3840x2160
-#     scale 2
-#     position 0 0
-# }
-#
-# output eDP-1 {
-#     resolution 1920x1080
-#     scale 1.25
-#     position 320 1080
-# }
+output HDMI-A-1 {
+    resolution 3840x2160
+    scale 2
+    position 0 0
+}
 
 output eDP-1 {
     resolution 1920x1080
     scale 1.25
-    position 0 0
+    position 320 1080
 }
+
+# output eDP-1 {
+#     resolution 1920x1080
+#     scale 1.25
+#     position 0 0
+# }
 exec gammastep -t 6500K:2700K
 
 input "1739:52837:DELL0A21:00_06CB:CE65_Touchpad" {
