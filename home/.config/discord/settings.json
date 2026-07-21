@@ -7,8 +7,8 @@
   "WINDOW_BOUNDS": {
     "x": 0,
     "y": 0,
-    "width": 1492,
-    "height": 762
+    "width": 1876,
+    "height": 978
   },
   "enableHardwareAcceleration": false,
   "asyncVideoInputDeviceInit": false,
