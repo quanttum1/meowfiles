@@ -24,8 +24,10 @@
 systemd-run --user --machine=meow@ bash -c '
 swaylock -c 000000 && \
 brightnessctl set 48001 && \
-brightnessctl -d "dell::kbd_backlight" set 100%
+brightnessctl -d "dell::kbd_backlight" set 100% && \
+env SWAYSOCK=$(echo /run/user/1000/sway-ipc.*) swaymsg output HDMI-A-1 enable
 '
 
+env SWAYSOCK=$(echo /run/user/1000/sway-ipc.*) swaymsg output HDMI-A-1 disable
 brightnessctl set 0
 brightnessctl -d "dell::kbd_backlight" set 0
