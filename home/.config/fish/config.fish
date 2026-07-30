@@ -68,6 +68,8 @@ end
 
 alias imgcat="wezterm imgcat"
 
+set -Ux fish_key_bindings fish_vi_key_bindings
+
 if [ -f ~/.cargo/env.fish ]
     source ~/.cargo/env.fish
 end
