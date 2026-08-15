@@ -3,12 +3,12 @@ Install these:
 sudo pacman -S wofi wezterm waybar ttf-agave-nerd
 yay swayfx
 paru swayfx
-yay bongocat
 ```
 
 And optionally these:
 ```bash
 paru bongocat
+yay bongocat
 sudo pacman -S neovim rust
 ```
 
