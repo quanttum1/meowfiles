@@ -19,6 +19,8 @@ return {
 	audible_bell = "SystemBeep",
 	default_cursor_style = "SteadyBar",
 	hide_tab_bar_if_only_one_tab = true,
+	window_close_confirmation = "AlwaysPrompt", -- here i added it, didn't work
+	skip_close_confirmation_for_processes_named = {},
 	window_background_opacity = 0.5,
 	text_background_opacity = 0.5,
 	enable_wayland = true,
